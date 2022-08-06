@@ -11,6 +11,10 @@ public class GameController : MonoBehaviour
     //Default position for platform
     float pos = 0;
 
+    //Game Over Canvas
+    [Header("Game Over UI Canvas Object")]
+    public GameObject gameOverCanvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +36,14 @@ public class GameController : MonoBehaviour
     void SpawnPlatforms()
     {
         //Spawn platforms randomly on the x axis and places them on the y axis every 2.5
-        Instantiate(platform, new Vector3(Random.value * 10 - 5f, pos, 0f), Quaternion.identity);
+        Instantiate(platform, new Vector3(Random.value * 10 - 5f, pos, 0.5f), Quaternion.identity);
         pos += 2.5f;
+    }
+
+    //Game over function
+    public void GameOver()
+    {
+        //Game Over Canvas is active
+        gameOverCanvas.SetActive(true);
     }
 }
