@@ -15,11 +15,22 @@ public class GameControls: MonoBehaviour
     {
         //Game is at a playing state
         Time.timeScale = 1f;
-    }
+        //Executing a courtine
+        StartCoroutine(CountTime());
+        //Time text equals finding
+        //the score object and using
+        //the text component
+        timerText = GameObject.Find("Score").GetComponent<Text>();
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        IEnumerator CountTime()
+        {
+            //After 1 second
+            //1 point is added to the score
+            //and will repeat the function
+            yield return new WaitForSeconds(1f);
+            timerCount++;
+            timerText.text = "Score: " + timerCount;
+            StartCoroutine(CountTime());
+        }
     }
 }
