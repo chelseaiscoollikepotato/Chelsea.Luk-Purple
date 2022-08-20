@@ -46,5 +46,7 @@ public class GameController : MonoBehaviour
         CancelInvoke("Spawn");
         //Game over canvas is visible
         gameOverCanvas.SetActive(true);
+        //Game is at a stopping state
+        Time.timeScale = 0;
     }
 }

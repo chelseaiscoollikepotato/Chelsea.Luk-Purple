@@ -38,6 +38,6 @@ public class PlayerControls : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Game Over function is called from the game manager
-        GameObject.Find("Gamecontroller").GetComponent<GameController>().GameOver();
+        GameObject.Find("GameController").GetComponent<GameController>().GameOver();
     }
 }
