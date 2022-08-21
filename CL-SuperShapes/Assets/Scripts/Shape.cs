@@ -32,11 +32,11 @@ public class Shape : MonoBehaviour
         //Local scale on x axis is less
         //or equal to .05
         if (transform.localScale.x <= .05f)
-        {
+        {        //Add 1 to score
+            Score.score++;
             //Destroy object
             Destroy(gameObject);
         }
-        //Add 1 to score
-        Score.score++;
+
     }
 }
