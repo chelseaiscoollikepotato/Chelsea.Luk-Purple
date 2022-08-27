@@ -17,6 +17,8 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //Transform the object to move to left
+        //according to the axis and speed
+        transform.position += Vector3.left * speed * Time.deltaTime;
     }
 }

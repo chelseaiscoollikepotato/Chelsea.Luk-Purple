@@ -47,6 +47,14 @@ public class PlayerControls : MonoBehaviour
             //gravity
             rb.AddForce(Vector3.up * (jumpPower * rb.mass * rb.gravityScale * 20.0f));
         }
+
+        //If the player position is less than
+        //the original position of the player
+        if (transform.position.x < posX)
+        {
+            //Execute GameOver function
+            GameOver();
+        }
     }
 
     //When an incoming collider makes contact
@@ -58,6 +66,13 @@ public class PlayerControls : MonoBehaviour
         {
             //isGrounded equals true
             isGrounded = true;
+        }
+
+        //If colliders tag equals enemy
+        if (collision.collider.tag == "Enemy")
+        {
+            //Game Over function is called
+            GameOver();
         }
     }
 
@@ -82,6 +97,25 @@ public class PlayerControls : MonoBehaviour
         {
             //isGrounded equals false
             isGrounded = false;
+        }
+    }
+
+    //Game over function
+    void GameOver()
+    {
+        //Game is at a stopping state
+        Time.timeScale = 0;
+    }
+
+    //When a collider on another object is touching
+    //this object's trigger
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //If triggers tag equals coin
+        if (collision.tag == "Coin")
+        {
+            //Destroy object
+            Destroy(collision.gameObject);
         }
     }
 }
