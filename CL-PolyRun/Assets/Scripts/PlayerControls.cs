@@ -103,8 +103,8 @@ public class PlayerControls : MonoBehaviour
     //Game over function
     void GameOver()
     {
-        //Game is at a stopping state
-        Time.timeScale = 0;
+        //GameOver function is called from the game manager
+        GameObject.Find("GameController").GetComponent<GameController>().GameOver();
     }
 
     //When a collider on another object is touching
@@ -114,6 +114,9 @@ public class PlayerControls : MonoBehaviour
         //If triggers tag equals coin
         if (collision.tag == "Coin")
         {
+            //Call IncrementScore from
+            //Game Controller
+            GameObject.Find("GameController").GetComponent<GameController>().IncrementScore();
             //Destroy object
             Destroy(collision.gameObject);
         }
