@@ -229,6 +229,52 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6185358136303196269, guid: 32099380f5be4314eaafd9392860df90, type: 3}
   m_PrefabInstance: {fileID: 97773627}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &498770784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498770786}
+  - component: {fileID: 498770785}
+  m_Layer: 0
+  m_Name: Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &498770785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498770784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e9a8003d0b1934bb71b4f8eaa6b29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  challengeObject: {fileID: 4586716817168330106, guid: 0ca5450675f7fde41b0f6eca7dac37ed, type: 3}
+  spawnDelay: 4
+  spawnTime: 5
+--- !u!4 &498770786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498770784}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.9705139, y: -2.90683, z: -0.358616}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab3fac5bcaaab794494402f8c7eed344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpPower: 5
+  jumpPower: 6
   isGrounded: 1
 --- !u!50 &1717558269
 Rigidbody2D:
@@ -753,8 +799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   challengeObject: {fileID: 3295892487618727297, guid: 6f247d16ce170f643a57be37a1f2b23e, type: 3}
-  spawnDelay: 1
-  spawnTime: 2
+  spawnDelay: 2
+  spawnTime: 3
 --- !u!4 &2061027401
 Transform:
   m_ObjectHideFlags: 0
