@@ -16,9 +16,6 @@ public class Movement : MonoBehaviour
         VerticalOnly
     }
 
-    [Header("Animator")]
-    public Animator animator;
-
     [SerializeField]
     private MovementType movementType = 0;
 
@@ -36,10 +33,7 @@ public class Movement : MonoBehaviour
         masterSpeed = speed;        
     }
 
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
+
 
     // Update is called once per frame
     void FixedUpdate()
