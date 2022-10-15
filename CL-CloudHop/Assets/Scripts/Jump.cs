@@ -7,7 +7,9 @@ public class Jump : MonoBehaviour
     Rigidbody2D rigidbody;
 
     float jumpForce = 15;
-    // Start is called before the first frame update
+
+
+    public bool canJump;
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -16,6 +18,18 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (rigidbody.velocity.y > -.01 && rigidbody.velocity.y < .01)
+        {
+            canJump = true;
+        }
+        else
+        {
+            canJump = false;
+        }
+
+        if (canJump && Input.GetButtonDown("Jump"))
+        {
+            rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
     }
 }
