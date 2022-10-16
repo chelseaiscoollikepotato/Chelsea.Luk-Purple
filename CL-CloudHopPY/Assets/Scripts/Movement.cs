@@ -8,6 +8,10 @@ public class Movement : MonoBehaviour
     Rigidbody2D rigidBody;
     Animator anim;
 
+    float jumpForce = 15;
+
+    public bool canJump;
+
     public float speed;
 
     float masterSpeed;
@@ -16,6 +20,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+
         anim = GetComponent<Animator>();
 
         masterSpeed = speed;        
@@ -52,7 +57,19 @@ public class Movement : MonoBehaviour
             anim.SetBool("isJumping", false); 
         }
 
+        if(canJump && Input.GetButtonDown("Jump"))
+        {
+            rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
 
+        if (rigidBody.velocity.y > -0.5 && rigidBody.velocity.y < 0.5)
+        {
+            canJump = true;
+        }
+        else
+        {
+            canJump = false;
+        }
 
         //move player left and right according to user input and speed
     }
