@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    Rigidbody rigidbody;
+    Rigidbody rigidbod;
 
     float jumpForce = 5.7f;
 
     public bool isGrounded;
+    
 
     float fallMultiplier = 1.5f;
 
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        rigidbod = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -23,12 +24,12 @@ public class Jump : MonoBehaviour
         Debug.DrawRay(transform.position, Vector3.down * .15f, Color.red);
 
         if(Input.GetButtonDown("Jump") && isGrounded){
-            rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            rigidbod.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 
-        if(rigidbody.velocity.y < 0)
+        if(rigidbod.velocity.y < 0)
         {
-            rigidbody.velocity += Physics.gravity * fallMultiplier * Time.deltaTime;
+            rigidbod.velocity += Physics.gravity * fallMultiplier * Time.deltaTime;
         }
     }
 }
