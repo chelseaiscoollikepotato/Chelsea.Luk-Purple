@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
     public float yForce;
     public float xForce;
     public float xDirection;
+    public float yDirection;
 
     private Rigidbody2D enemyRigidbody;
 
@@ -22,6 +23,16 @@ public class EnemyMovement : MonoBehaviour
             Vector2 jumpForce = new Vector2(xForce * xDirection, yForce);
             enemyRigidbody.AddForce(jumpForce);
         }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Vector2 jumpForce = new Vector2(xForce * xDirection, yForce);
+            enemyRigidbody.AddForce(jumpForce);
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            Vector2 jumpForce = new Vector2(xForce, xDirection);
+            enemyRigidbody.AddForce(jumpForce);
+        }
     }
     private void FixedUpdate()
     {
@@ -32,8 +43,13 @@ public class EnemyMovement : MonoBehaviour
         }
         if (transform.position.x >= 8)
         {
-            
+            xDirection = -1;
+            enemyRigidbody.AddForce(Vector2.left * xForce);
         }
-
+        if (transform.position.y >= 4)
+        {
+            yDirection = -4;
+            enemyRigidbody.AddForce(Vector2.down * yForce);
+        }
     }
 }
