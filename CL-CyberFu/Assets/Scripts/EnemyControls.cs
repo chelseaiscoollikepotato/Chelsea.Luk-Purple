@@ -34,27 +34,29 @@ public class EnemyControls : MonoBehaviour
             rigidbodyEnemy.isKinematic = true;
             return;
         }
-        if(Vector3.Distance(transform.position, target.position) >= attackingDistance)
+        if (Vector3.Distance(transform.position, target.position) >= attackingDistance)
         {
             rigidbodyEnemy.isKinematic = false;
             direction = target.position - transform.position;
             direction.y = 0;
 
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 100);
+
             if (rigidbodyEnemy.velocity.sqrMagnitude != 0)
             {
                 rigidbodyEnemy.velocity = transform.forward * speed;
                 animatorEnemy.SetBool("Walk", true);
             }
-            else if(Vector3.Distance(transform.position, target.position) <= attackingDistance)
-            {
-                rigidbodyEnemy.isKinematic = false;
-                rigidbodyEnemy.velocity = Vector3.zero;
-                animatorEnemy.SetBool("Walk", false);
-                isFollowingTarget = false;
-                isAttackingTarget = true;
-            }
         }
+        else if (Vector3.Distance(transform.position, target.position) <= attackingDistance)
+        {
+            rigidbodyEnemy.isKinematic = false;
+            rigidbodyEnemy.velocity = Vector3.zero;
+            animatorEnemy.SetBool("Walk", false);
+            isFollowingTarget = false;
+            isAttackingTarget = true;
+        }
+        
     }
     // Update is called once per frame
     void Update()
@@ -69,8 +71,11 @@ public class EnemyControls : MonoBehaviour
 
     void Attack()
     {
+        Debug.Log("I'm attacking now");
+        Debug.Log(currentAttackingTime);
         if (!isAttackingTarget)
         {
+
             return;
         }
 
