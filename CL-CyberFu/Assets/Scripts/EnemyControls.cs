@@ -83,7 +83,7 @@ public class EnemyControls : MonoBehaviour
 
         if (currentAttackingTime > maxAttackingTime)
         {
-            EnemyAttack(Random.Range(1, 4));
+            EnemyAttack(Random.Range(1, 7));
             currentAttackingTime = 0f;
         }
 
@@ -109,6 +109,21 @@ public class EnemyControls : MonoBehaviour
         if (attack == 3)
         {
             animatorEnemy.SetTrigger("Attack3");
+        }
+
+        if (attack == 4)
+        {
+            animatorEnemy.SetTrigger("Attack4");
+        }
+
+        if (attack == 5)
+        {
+            animatorEnemy.SetTrigger("Attack5");
+        }
+
+        if (attack == 6)
+        {
+            animatorEnemy.SetTrigger("Attack6");
         }
     }
 }
