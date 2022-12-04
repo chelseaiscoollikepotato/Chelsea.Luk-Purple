@@ -7,6 +7,8 @@ TagManager:
   - FxTemporaire
   - exit
   - pickup
+  - thing
+  - thing2
   layers:
   - Default
   - TransparentFX
