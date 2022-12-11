@@ -3741,7 +3741,7 @@ PrefabInstance:
     - target: {fileID: 748992279688134216, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
       propertyPath: HealthBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 860930419}
     - target: {fileID: 748992279688134216, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
       propertyPath: allParticles
       value: 
@@ -3789,6 +3789,10 @@ PrefabInstance:
     - target: {fileID: 748992279688134217, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 748992280852034720, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
