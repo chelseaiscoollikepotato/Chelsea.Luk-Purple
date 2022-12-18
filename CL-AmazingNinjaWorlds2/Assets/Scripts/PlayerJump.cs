@@ -43,13 +43,13 @@ public class PlayerJump : MonoBehaviour
         // and change the value of the Codey's velocity
         // if Codey's velocity is negative
         // then Codey is falling and we use the fallMultiplier
-        if (rigidBody.velocity.y < 0)
+        if (rigidBody.velocity.y < 0.5)
         {
             rigidBody.velocity += Vector3.up * Physics.gravity.y * fallMultiplier * Time.fixedDeltaTime;
         }
         // and if Codey's velocity is positive
         // then Codey is jumping and we use the jumpMulitiplier
-        else if (rigidBody.velocity.y > 0)
+        else if (rigidBody.velocity.y > 0.5)
         {
             rigidBody.velocity += Vector3.up * Physics.gravity.y * jumpMultiplier * Time.fixedDeltaTime;
         }
