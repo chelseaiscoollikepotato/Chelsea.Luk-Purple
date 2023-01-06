@@ -31,6 +31,11 @@ public class InterfaceManager : MonoBehaviour
         if (Input.GetButton("Submit") && dialogBox.activeInHierarchy == true)
         {
             dialogBox.SetActive(false);
+
+            if (npc.GetComponent<DialogOpen>().end)
+            {
+                SceneManager.LoadScene(0);
+            }
         }
     }
 

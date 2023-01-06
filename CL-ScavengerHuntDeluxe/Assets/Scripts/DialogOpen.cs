@@ -32,6 +32,41 @@ public class DialogOpen : MonoBehaviour
     private void searchDialog()
     {
         dialog = "Hi! Can you help me find my " + collectibles[clue] + "?";
+
+        switch (clue)
+        {
+            case 0:
+                dialog = "I'm trying to make a movie but I lost my film! Can you help me find it?";
+                break;
+            case 1:
+                dialog = "Oh no! I've lost the balloons to my party, can you help?";
+                break;
+            case 2:
+                dialog = "Help! My friend is drowning! Can you help me find the life saver?";
+                break;
+            case 3:
+                dialog = "I want to play dart but I lost my bull's eye, can you help me find it?";
+                break;
+            case 4:
+                dialog = "Can you help me find my grandpa's pipe?";
+                break;
+            case 5:
+                dialog = "Oh no, I've lost the key to my car! Can you help?";
+                break;
+            case 6:
+                dialog = "Help! I lost my fish! Can you help find him?";
+                break;
+            case 7:
+                dialog = "I was going to feed the birds with my birdhouse but it was gone! Can you help me find it?";
+                break;
+            case 8:
+                dialog = "can you help me find my red airhorn?";
+                break;
+            case 9:
+                dialog = "I have a talent show coming up but I lost my magic hat! Can you help me find it?";
+                break;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
