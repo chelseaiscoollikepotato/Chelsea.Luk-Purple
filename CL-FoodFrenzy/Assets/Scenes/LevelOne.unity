@@ -152,7 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2b1a57bbe5e1043826c2ebc5a5e2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grid: {fileID: 0}
+  grid: {fileID: 581336197}
+  hud: {fileID: 4833338155514895042}
   score1Star: 15000
   score2Star: 18000
   score3Star: 21000
@@ -618,6 +619,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 273cfb26af8d053409bdd656dacee8f7, type: 3}
+--- !u!1 &1598727386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1598727386, guid: 4420ef6478ab6704dba312be297d9ec0, type: 3}
+  m_PrefabInstance: {fileID: 4833338155514895041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1598727388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598727386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2fca8c309162d42b1510e388d9c532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenParent: {fileID: 0}
+  scoreParent: {fileID: 0}
+  loseText: {fileID: 0}
+  scoretext: {fileID: 0}
+  stars: []
 --- !u!1001 &4833338155514895041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -719,3 +742,14 @@ PrefabInstance:
       objectReference: {fileID: 245619825}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4420ef6478ab6704dba312be297d9ec0, type: 3}
+--- !u!114 &4833338155514895042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7370992903600497327, guid: 4420ef6478ab6704dba312be297d9ec0, type: 3}
+  m_PrefabInstance: {fileID: 4833338155514895041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21056651eaab3b147a8f508cd185d272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
