@@ -71,10 +71,12 @@ public class GameOver : MonoBehaviour
 
                 if (i > 0)
                 {
-                    stars[i = 1].enabled = false;
+                    stars[i - 1].enabled = false;
 
-                    yield return new WaitForSeconds(0.5f);
+                    
                 }
+                
+                yield return new WaitForSeconds(0.5f);
             }
         }
 
@@ -88,6 +90,6 @@ public class GameOver : MonoBehaviour
 
     public void OnDoneClicked()
     {
-
+        SceneManager.LoadScene("LevelSelect");
     }
 }

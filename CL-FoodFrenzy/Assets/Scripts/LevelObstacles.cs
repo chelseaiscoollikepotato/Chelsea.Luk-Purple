@@ -35,7 +35,7 @@
 
         movesUsed++;
 
-        hud.SetRemaining(numMoves = movesUsed);
+        hud.SetRemaining(numMoves - movesUsed);
 
         if (numMoves - movesUsed == 0 && numObstaclesLeft > 0)
         {
