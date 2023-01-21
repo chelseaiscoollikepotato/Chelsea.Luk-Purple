@@ -762,7 +762,7 @@ MonoBehaviour:
   screenParent: {fileID: 1156014475}
   scoreParent: {fileID: 4833338155374679726}
   loseText: {fileID: 1474884885}
-  scoreText: {fileID: 5653874948679424942}
+  scoreText: {fileID: 1631239204}
   stars:
   - {fileID: 4833338155502388559}
   - {fileID: 4833338155745049764}
@@ -937,7 +937,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -615, y: -602}
+  m_AnchoredPosition: {x: -615, y: -609}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1631239205
@@ -1685,7 +1685,7 @@ MonoBehaviour:
   remainingSubtext: {fileID: 4833338156254743030}
   targetText: {fileID: 4833338156599629896}
   targetSubtext: {fileID: 4833338155681959890}
-  scoreText: {fileID: 5653874948679424942}
+  scoreText: {fileID: 1631239204}
   stars:
   - {fileID: 4833338155502388559}
   - {fileID: 4833338155745049764}

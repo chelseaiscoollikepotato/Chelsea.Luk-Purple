@@ -10,7 +10,7 @@
     {
         type = LevelType.MOVES;
 
-        hud.setLeveltype(type);
+        hud.SetLevelType(type);
         hud.SetScore(currentScore);
         hud.SetTarget(targetScore);
         hud.SetRemaining(numMoves);

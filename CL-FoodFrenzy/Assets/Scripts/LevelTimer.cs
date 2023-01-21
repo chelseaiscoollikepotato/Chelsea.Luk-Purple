@@ -13,7 +13,7 @@ public class LevelTimer : Level
     {
         type = LevelType.TIMER;
 
-        hud.setLeveltype(type);
+        hud.SetLevelType(type);
         hud.SetScore(currentScore);
         hud.SetTarget(targetScore);
         hud.SetRemaining(string.Format("{0}:{1:00}", timeInSeconds / 60, timeInSeconds % 60));
@@ -27,7 +27,7 @@ public class LevelTimer : Level
         {
             timer += Time.deltaTime;
 
-            hud.SetRemaining(string.Format("{0}:{1:00}", (int)Mathf.Max((timeInSeconds-timer)/60, 0), (int)Mathf.Max((timeInSeconds-timer)% 60,0)));
+            hud.SetRemaining(string.Format("{0}:{1:00}", (int)Mathf.Max((timeInSeconds - timer) / 60, 0), (int)Mathf.Max((timeInSeconds - timer) % 60, 0)));
 
             if (timeInSeconds - timer <= 0)
             {

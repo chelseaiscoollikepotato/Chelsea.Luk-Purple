@@ -86,7 +86,7 @@ public class HUD : MonoBehaviour
         remainingText.text = remaining;
     }
 
-    public void setLeveltype(Level.LevelType type)
+    public void SetLevelType(Level.LevelType type)
     {
         switch (type)
         {
@@ -94,12 +94,12 @@ public class HUD : MonoBehaviour
                 remainingSubtext.text = "Moves Remaining";
                 targetSubtext.text = "Target Score";
                 break;
-            case Level.LevelType.   OBSTACLE:
+            case Level.LevelType.OBSTACLE:
                 remainingSubtext.text = "Moves Remaining";
-                targetSubtext.text = "Target Score";
+                targetSubtext.text = "Dishes Remaining";
                 break;
             case Level.LevelType.TIMER:
-                remainingSubtext.text = "Moves Remaining";
+                remainingSubtext.text = "Time Remaining";
                 targetSubtext.text = "Target Score";
                 break;
 
